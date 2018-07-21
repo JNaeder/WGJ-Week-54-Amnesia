@@ -9,9 +9,10 @@ public class ButtonScript : MonoBehaviour {
 	public GameObject door;
 
 	Guy_Controller guy;
+    SpriteRenderer sP;
 	// Use this for initialization
 	void Start () {
-		
+        sP = GetComponentInChildren<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -22,8 +23,12 @@ public class ButtonScript : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if(collision.gameObject.tag == "Player"){
-			//Debug.Log("Press Button");
-			door.SetActive(false);
+            //Debug.Log("Press Button");
+            if (door != null)
+            {
+                door.SetActive(false);
+                sP.sprite = buttonDown;
+            }
 		}
 	}
 
@@ -38,7 +43,11 @@ public class ButtonScript : MonoBehaviour {
 			{
 				if (!guy.isGhosting)
 				{
-					door.SetActive(true);
+                    if (door != null)
+                    {
+                        door.SetActive(true);
+                        sP.sprite = buttonUp;
+                    }
 				}
 			}
 		}

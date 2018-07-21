@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: d2fecef267d204bfcaa9172c729faad0
+guid: 77c9f6a5bee60ef49a5ef99357dc0799
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Button_1_0
-    21300002: Button_1_1
+    21300000: Switch_1_0
+    21300002: Switch_1_1
   externalObjects: {}
   serializedVersion: 6
   mipmaps:
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button_1_0
+      name: Switch_1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7848dd5248bf6345a0af183f2c6a744
+      spriteID: 4c839e86fad273549abaedae55272255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button_1_1
+      name: Switch_1_1
       rect:
         serializedVersion: 2
-        x: 8
+        x: 16
         y: 0
-        width: 8
-        height: 8
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37768b248b1f4ae45ab999507938c560
+      spriteID: 30d4c8baaad1d18419f3d1e6fc3e0676
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ca06c2973d7c645c6b78a20d40a99437
+    spriteID: e76cbbc2f4faf004a82e482e76b34371
     vertices: []
     indices: 
     edges: []

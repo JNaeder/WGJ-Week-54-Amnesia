@@ -32,13 +32,13 @@ public class Guy_Controller : MonoBehaviour {
 	}
 
 	void Update(){
-		
+        Ghosting();
 
-	}
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Ghosting();
+		
 		Movement();
 
 		
