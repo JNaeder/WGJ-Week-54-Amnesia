@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Guy_Controller : MonoBehaviour {
 	public float speed = 5f;
@@ -13,7 +14,9 @@ public class Guy_Controller : MonoBehaviour {
 	public GameObject guyClone;
 	public float maxSteps;
 	public bool isGhosting;
-
+	public bool isGrounded;
+	public Transform groundCheck;
+	public LayerMask groundMask;
 
 	GameObject newClone;
 	Guy_Ghost ghostGuy;
@@ -21,27 +24,62 @@ public class Guy_Controller : MonoBehaviour {
 
 	float steps;
 	float newX;
-    float newY;
+
+
+
+	GameManager gM;
 
 	// Use this for initialization
 	void Start () {
 		rB = GetComponent<Rigidbody2D>();
 		sP = GetComponent<SpriteRenderer>();
 
+		gM = FindObjectOfType<GameManager>();
+
 		newClone = null;
 	}
 
 	void Update(){
         Ghosting();
-
+		Movement();
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		
-		Movement();
 
+		CheckGrounded();
 		
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		
+		if (collision.gameObject.tag == "Enemy")
+		{
+			if (isGhosting)
+			{
+			}
+			else
+			{
+				Death();
+			}
+		}
+
+	}
+
+
+
+	public void Death(){
+		//transform.position = startPos;
+		SceneManager.LoadScene(gM.currentScene);
+		Debug.Log("Death!");
+
+	}
+
+	void CheckGrounded(){
+		isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundMask);
+
 	}
 
 	void Movement(){
@@ -51,9 +89,11 @@ public class Guy_Controller : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump"))
         {
-
-            rB.velocity = new Vector2(rB.velocity.x, 0);
-            rB.AddForce(Vector2.up * jumpStrength * 100);
+			if (isGrounded)
+			{
+				rB.velocity = new Vector2(rB.velocity.x, 0);
+				rB.AddForce(Vector2.up * jumpStrength * 100);
+			}
 
         }
 
@@ -81,7 +121,6 @@ public class Guy_Controller : MonoBehaviour {
 			sP.color = new Color(1, 1, 1, 0.5f);
 			lastRealPos = transform.position;
 			newX = transform.position.x;
-            newY = transform.position.y;
 			ghostGuy = newClone.GetComponent<Guy_Ghost>();
 			ghostGuy.maxSteps = maxSteps;
 			isGhosting = true;
@@ -110,17 +149,25 @@ public class Guy_Controller : MonoBehaviour {
 
 		}
 		if(Input.GetKeyUp(KeyCode.LeftShift)){
-			isGhosting = false;
-			if(ghostGuy != null){
-				if(ghostGuy.isGhosting){
-					Destroy(newClone.gameObject);
-                    sP.color = Color.white;
-                    transform.position = lastRealPos;
-				}
-
-			}
-			Destroy(newClone.gameObject);
+			ResetGhost();
 		}
+
+	}
+
+
+	void ResetGhost(){
+		isGhosting = false;
+        if (ghostGuy != null)
+        {
+            if (ghostGuy.isGhosting)
+            {
+                Destroy(newClone.gameObject);
+                sP.color = Color.white;
+                transform.position = lastRealPos;
+            }
+
+        }
+        Destroy(newClone.gameObject);
 
 	}
 }
