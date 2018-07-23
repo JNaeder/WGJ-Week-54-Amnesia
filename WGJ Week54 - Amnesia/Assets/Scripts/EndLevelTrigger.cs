@@ -42,8 +42,8 @@ public class EndLevelTrigger : MonoBehaviour {
 
 	IEnumerator LoadScene(){
 		transitionAnim.SetTrigger("End");
+		gM.inPuzzleOrNot = 0;
 		yield return new WaitForSeconds(1.0f);
-        gM.inPuzzleOrNot = 0;
 		SceneManager.LoadScene(sceneToLoad);
 	}
 }

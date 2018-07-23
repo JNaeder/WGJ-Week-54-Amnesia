@@ -6,9 +6,16 @@ public class CameraFollow : MonoBehaviour {
 	public Transform target;
 	public float speed;
 	public Vector3 offset;
+
+	OutdoorsManager oM;
+	GameManager gM;
+
 	// Use this for initialization
 	void Start () {
-		
+		oM = FindObjectOfType<OutdoorsManager>();
+		gM = FindObjectOfType<GameManager>();
+
+		transform.position = oM.spawnPosition[gM.completedScene].position + offset;
 	}
 	
 	// Update is called once per frame

@@ -80,8 +80,8 @@ public class DialogueManager : MonoBehaviour {
 
 	IEnumerator LoadScene(){
 		transitionAnim.SetTrigger("End");
+		gM.inPuzzleOrNot = 1;
 		yield return new WaitForSeconds(1.0f);
-        gM.inPuzzleOrNot = 1;
         SceneManager.LoadScene(gM.currentScene);
 
 	}

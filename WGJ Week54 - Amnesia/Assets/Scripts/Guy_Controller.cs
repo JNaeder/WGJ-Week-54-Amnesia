@@ -10,6 +10,7 @@ public class Guy_Controller : MonoBehaviour {
 
 	Rigidbody2D rB;
 	SpriteRenderer sP;
+	Animator anim;
 
 	public GameObject guyClone;
 	public float maxSteps;
@@ -27,6 +28,7 @@ public class Guy_Controller : MonoBehaviour {
 
 	float steps;
 	float newX;
+	float h;
 
 
 
@@ -36,7 +38,7 @@ public class Guy_Controller : MonoBehaviour {
 	void Start () {
 		rB = GetComponent<Rigidbody2D>();
 		sP = GetComponent<SpriteRenderer>();
-
+		anim = GetComponent<Animator>();
 		gM = FindObjectOfType<GameManager>();
 
 		newClone = null;
@@ -44,12 +46,15 @@ public class Guy_Controller : MonoBehaviour {
 
 	void Update(){
         Ghosting();
+		Movement();
         Jumping();
+		UpdateAnimator();
+
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        Movement();
+        
 
         CheckGrounded();
 		
@@ -77,6 +82,12 @@ public class Guy_Controller : MonoBehaviour {
 		//transform.position = startPos;
 		SceneManager.LoadScene(gM.currentScene);
 		Debug.Log("Death!");
+
+	}
+
+	void UpdateAnimator(){
+		anim.SetFloat("h", Mathf.Abs(h));
+		anim.SetBool("isGrounded", isGrounded);
 
 	}
 
@@ -111,7 +122,7 @@ public class Guy_Controller : MonoBehaviour {
     }
 
 	void Movement(){
-		float h = Input.GetAxis("Horizontal");
+		h = Input.GetAxis("Horizontal");
 
         
         if (isTouchingSideLeft)

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54
-    FMOD Session\WGJ Week 54 FMOD Session.fspro
-  SourceProjectPathUnformatted: C:\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ
-    Week 54 FMOD Session\WGJ Week 54 FMOD Session.fspro
-  SourceBankPathUnformatted: C:\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ
-    Week 54 FMOD Session\Build
+  sourceProjectPath: /Users/John/Documents/GitHub/WGJ-Week-54-Amnesia/WGJ Week 54
+    FMOD Session/WGJ Week 54 FMOD Session.fspro
+  SourceProjectPathUnformatted: /Users/John/Documents/GitHub/WGJ-Week-54-Amnesia/WGJ
+    Week 54 FMOD Session/WGJ Week 54 FMOD Session.fspro
+  SourceBankPathUnformatted: /Users/John/Documents/GitHub/WGJ-Week-54-Amnesia/WGJ
+    Week 54 FMOD Session/Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0

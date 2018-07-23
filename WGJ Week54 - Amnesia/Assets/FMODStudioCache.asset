@@ -12,14 +12,33 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114734347966793946}
-  - {fileID: 114459834706252690}
+  - {fileID: 114926999766949500}
+  - {fileID: 114024687381091072}
   EditorEvents:
-  - {fileID: 114412676615612186}
-  MasterBankRef: {fileID: 114459834706252690}
-  StringsBankRef: {fileID: 114734347966793946}
-  stringsBankWriteTime: 636678851720523821
+  - {fileID: 114445768034256922}
+  MasterBankRef: {fileID: 114024687381091072}
+  StringsBankRef: {fileID: 114926999766949500}
+  stringsBankWriteTime: 636679343810000000
   cacheVersion: 2
+--- !u!114 &114024687381091072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/John/Documents/GitHub/WGJ-Week-54-Amnesia/WGJ Week 54 FMOD Session/Build/Desktop/Master
+    Bank.bank
+  lastModified: 636679343810000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 658944
+  Exists: 1
 --- !u!114 &114025208031154274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,6 +70,21 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114082479000218196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114102338783393792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,6 +137,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 24000
+--- !u!114 &114445768034256922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  guid: c68b3b9588bf0a4b83c321c5930f94f8
+  Banks:
+  - {fileID: 114024687381091072}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114102338783393792}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 24000
 --- !u!114 &114459834706252690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +208,25 @@ MonoBehaviour:
   Path: C:\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop\Master
     Bank.strings.bank
   lastModified: 636678851720523821
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 716
+  Exists: 1
+--- !u!114 &114926999766949500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/John/Documents/GitHub/WGJ-Week-54-Amnesia/WGJ Week 54 FMOD Session/Build/Desktop/Master
+    Bank.strings.bank
+  lastModified: 636679343810000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop

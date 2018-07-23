@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 730063628}
   - component: {fileID: 730063627}
   - component: {fileID: 730063629}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Floors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10129,6 +10129,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114064345194644186, guid: 08d7b43df849ea94fa63bda061cf9eb3,
+        type: 2}
+      propertyPath: puzzleObject.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4434003617257480, guid: 08d7b43df849ea94fa63bda061cf9eb3, type: 2}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -10166,6 +10171,11 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 890963208}
+    - target: {fileID: 114064345194644186, guid: 08d7b43df849ea94fa63bda061cf9eb3,
+        type: 2}
+      propertyPath: puzzleObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 890963208}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08d7b43df849ea94fa63bda061cf9eb3, type: 2}
   m_IsPrefabAsset: 0
@@ -10176,6 +10186,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114680201969813628, guid: 360fc562ed8b4fb4886ab6a4d4d2d559,
+        type: 2}
+      propertyPath: puzzleObject.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4905777400771034, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
       propertyPath: m_LocalPosition.x
       value: -16
@@ -10213,6 +10228,16 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 890963208}
+    - target: {fileID: 114680201969813628, guid: 360fc562ed8b4fb4886ab6a4d4d2d559,
+        type: 2}
+      propertyPath: puzzleObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 890963208}
+    - target: {fileID: 114680201969813628, guid: 360fc562ed8b4fb4886ab6a4d4d2d559,
+        type: 2}
+      propertyPath: destroysObject
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
   m_IsPrefabAsset: 0
@@ -10352,6 +10377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene: 0
   completedScene: 0
+  inPuzzleOrNot: 0
 --- !u!1001 &1948356178
 Prefab:
   m_ObjectHideFlags: 0

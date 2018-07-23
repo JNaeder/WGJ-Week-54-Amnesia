@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 730063628}
   - component: {fileID: 730063627}
   - component: {fileID: 730063629}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Floors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11443,6 +11443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene: 0
   completedScene: 0
+  inPuzzleOrNot: 0
 --- !u!1001 &2014451659
 Prefab:
   m_ObjectHideFlags: 0
