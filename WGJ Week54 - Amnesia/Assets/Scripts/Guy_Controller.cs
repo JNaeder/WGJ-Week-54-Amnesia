@@ -15,7 +15,10 @@ public class Guy_Controller : MonoBehaviour {
 	public float maxSteps;
 	public bool isGhosting;
 	public bool isGrounded;
+    public bool isTouchingSideLeft;
+    public bool isTouchingSideRight;
 	public Transform groundCheck;
+    public Transform sideCheckLeft, sideCheckRight;
 	public LayerMask groundMask;
 
 	GameObject newClone;
@@ -41,14 +44,14 @@ public class Guy_Controller : MonoBehaviour {
 
 	void Update(){
         Ghosting();
-		Movement();
+        Jumping();
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		
+        Movement();
 
-		CheckGrounded();
+        CheckGrounded();
 		
 	}
 
@@ -79,21 +82,18 @@ public class Guy_Controller : MonoBehaviour {
 
 	void CheckGrounded(){
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundMask);
+        isTouchingSideLeft = Physics2D.OverlapCircle(sideCheckLeft.position, 0.25f, groundMask);
+        isTouchingSideRight = Physics2D.OverlapCircle(sideCheckRight.position, 0.25f, groundMask);
+    }
 
-	}
-
-	void Movement(){
-		float h = Input.GetAxis("Horizontal");
-
-        transform.position += new Vector3(h * speed * Time.deltaTime, 0, 0);
-
+    void Jumping() {
         if (Input.GetButtonDown("Jump"))
         {
-			if (isGrounded)
-			{
-				rB.velocity = new Vector2(rB.velocity.x, 0);
-				rB.AddForce(Vector2.up * jumpStrength * 100);
-			}
+            if (isGrounded)
+            {
+                rB.velocity = new Vector2(rB.velocity.x, 0);
+                rB.AddForce(Vector2.up * jumpStrength * 100);
+            }
 
         }
 
@@ -107,7 +107,26 @@ public class Guy_Controller : MonoBehaviour {
             rB.velocity += Vector2.up * Physics2D.gravity.y * upMult * Time.deltaTime;
 
         }
-	}
+
+    }
+
+	void Movement(){
+		float h = Input.GetAxis("Horizontal");
+
+        
+        if (isTouchingSideLeft)
+        {
+            if (h < 0) {
+                h = 0;
+            }
+        }
+        else if (isTouchingSideRight) {
+            if (h > 0) {
+                h = 0;
+            }
+        }
+        transform.position += new Vector3(h * speed * Time.deltaTime, 0, 0);
+    }
 
 
 	void Ghosting(){
@@ -117,13 +136,22 @@ public class Guy_Controller : MonoBehaviour {
 		
 		if(Input.GetKeyDown(KeyCode.LeftShift)){
 			newClone = Instantiate(guyClone, transform.position, Quaternion.identity);
-
+            
 			sP.color = new Color(1, 1, 1, 0.5f);
-			lastRealPos = transform.position;
+			//lastRealPos = transform.position;
 			newX = transform.position.x;
 			ghostGuy = newClone.GetComponent<Guy_Ghost>();
 			ghostGuy.maxSteps = maxSteps;
 			isGhosting = true;
+
+
+            if (!isGrounded)
+            {
+                rB.AddForce(Vector2.up * (jumpStrength - 2) * 100);
+            }
+            else {
+                rB.AddForce(Vector2.up * (jumpStrength + 2) * 100);
+            }
 		}
 
 		if (Input.GetKey(KeyCode.LeftShift)){
@@ -139,10 +167,7 @@ public class Guy_Controller : MonoBehaviour {
 
 
 				if(ghostGuy.isGhosting == false){
-					Destroy(newClone.gameObject);
-                    sP.color = Color.white;
-                    transform.position = lastRealPos;
-					isGhosting = false;
+                    ResetGhost();
 
 				}
 			}
@@ -159,14 +184,14 @@ public class Guy_Controller : MonoBehaviour {
 		isGhosting = false;
         if (ghostGuy != null)
         {
-            if (ghostGuy.isGhosting)
-            {
+            
                 Destroy(newClone.gameObject);
                 sP.color = Color.white;
-                transform.position = lastRealPos;
-            }
+                transform.position = ghostGuy.transform.position;
+            
 
         }
+        rB.velocity = Vector2.zero;
         Destroy(newClone.gameObject);
 
 	}

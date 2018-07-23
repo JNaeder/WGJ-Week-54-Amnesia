@@ -5,7 +5,8 @@ using UnityEngine;
 public class Switch : MonoBehaviour {
 
     public Sprite switchUp, switchDown;
-    public GameObject door;
+    public GameObject[] puzzleObject;
+    public bool destroysObject, turnsOnObject;
 
     SpriteRenderer sP;
 
@@ -23,10 +24,39 @@ public class Switch : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player") {
             sP.sprite = switchDown;
-            if (door != null)
+            if (puzzleObject != null)
             {
-                Destroy(door);
+                if (destroysObject)
+                {
+                    for (int i = 0; i < puzzleObject.Length; i++) {
+                        Destroy(puzzleObject[i]);
+                    }
+                }
+                else if (turnsOnObject) {
+                    for (int i = 0; i < puzzleObject.Length; i++)
+                    {
+                        puzzleObject[i].SetActive(true);
+
+                    }
+                }
             }
         }
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        
+            for (int i = 0; i < puzzleObject.Length; i++)
+            {
+            if (puzzleObject[i] != null)
+            {
+                Gizmos.DrawLine(transform.position, puzzleObject[i].transform.position);
+            }
+
+            }
+            
+        
     }
 }

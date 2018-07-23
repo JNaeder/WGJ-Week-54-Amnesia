@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
 	public static GameManager gM;
 	public int currentScene = 0;
 	public int completedScene = 0;
+    public int inPuzzleOrNot = 0;
 
 	private void Awake()
 	{
@@ -29,6 +30,8 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
+
+
 	}
 }

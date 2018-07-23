@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4329241580806912}
   - component: {fileID: 212493524753626044}
-  - component: {fileID: 61298971313587254}
+  - component: {fileID: 60113603810284490}
   m_Layer: 10
   m_Name: Spike
   m_TagString: Enemy
@@ -34,15 +34,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1763813020311308}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.5, y: -4.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -7.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61298971313587254
-BoxCollider2D:
+--- !u!60 &60113603810284490
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -63,9 +63,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.11157656, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.13779306, y: 0.4969592}
 --- !u!212 &212493524753626044
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -64,8 +64,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1697406914405116}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 0.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.5, y: 8.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4272332194255804}
@@ -136,6 +136,9 @@ MonoBehaviour:
   buttonDown: {fileID: 21300002, guid: d2fecef267d204bfcaa9172c729faad0, type: 3}
   buttonUp: {fileID: 21300000, guid: d2fecef267d204bfcaa9172c729faad0, type: 3}
   door: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!212 &212152444990814202
 SpriteRenderer:
   m_ObjectHideFlags: 1

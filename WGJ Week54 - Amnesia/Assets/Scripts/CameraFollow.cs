@@ -21,7 +21,7 @@ public class CameraFollow : MonoBehaviour {
 	}
 
 	public void SetTarget(){
-		target = FindObjectOfType<Guy_Controller>().transform;
+		target = FindObjectOfType<Outside_Guy_Controller>().transform;
 
 	}
 }

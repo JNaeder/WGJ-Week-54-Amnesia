@@ -6,7 +6,10 @@ public class ButtonScript : MonoBehaviour {
 
 	public Sprite buttonDown, buttonUp;
 
-	public GameObject door;
+	public GameObject[] puzzleObject;
+    public LayerMask mask;
+
+    bool isPressed;
 
 	Guy_Controller guy;
     SpriteRenderer sP;
@@ -17,39 +20,58 @@ public class ButtonScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (puzzleObject != null)
+        {
+            if (Physics2D.OverlapBox(transform.position, Vector2.one * 0.5f, 0, mask))
+            {
+                if (!isPressed)
+                {
+                    isPressed = true;
+                    for (int i = 0; i < puzzleObject.Length; i++) {
+                        puzzleObject[i].SetActive(false);
+                    }
+                    sP.sprite = buttonDown;
+                }
+            }
+            else
+            {
+                if (isPressed)
+                {
+                    isPressed = false;
+                    for (int i = 0; i < puzzleObject.Length; i++)
+                    {
+                        if (puzzleObject[i] != null)
+                        {
+                            puzzleObject[i].SetActive(true);
+                        }
+                    }
+                    sP.sprite = buttonUp;
+                }
+            }
+        }
+        else {
+            sP.sprite = buttonDown;
+
+        }
 		
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		if(collision.gameObject.tag == "Player"){
-            //Debug.Log("Press Button");
-            if (door != null)
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+
+        for (int i = 0; i < puzzleObject.Length; i++)
+        {
+            if (puzzleObject[i] != null)
             {
-                door.SetActive(false);
-                sP.sprite = buttonDown;
+                Gizmos.DrawLine(transform.position, puzzleObject[i].transform.position);
             }
-		}
-	}
+
+        }
 
 
-	private void OnTriggerExit2D(Collider2D collision)
-	{
-		if (collision.gameObject.tag == "Player")
-		{
-			//Debug.Log("Off of Button");
-			guy = collision.gameObject.GetComponent<Guy_Controller>();
-			if (guy != null)
-			{
-				if (!guy.isGhosting)
-				{
-                    if (door != null)
-                    {
-                        door.SetActive(true);
-                        sP.sprite = buttonUp;
-                    }
-				}
-			}
-		}
-	}
+    }
+
+
 }

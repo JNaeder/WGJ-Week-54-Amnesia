@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Outside_Test.unity
     guid: 267d1a48d5d527047b2d2b2b39b10f9e
   - enabled: 1
-    path: Assets/Scenes/TestLevel_1.unity
-    guid: b7eb4ab2519ac054a94d1f69bf01afa0
+    path: Assets/Scenes/Puzzle Levels/BasicButtonAndSwitch.unity
+    guid: de31af3258478d5498425c25598d3ae2
   - enabled: 1
-    path: Assets/Scenes/TestLevel_2.unity
-    guid: 57b18e18593774aa1ac5fbac6dd6c419
+    path: Assets/Scenes/Puzzle Levels/GhostJumpingAndSwitches.unity
+    guid: 9389f3b38a558f44585abd11f1cd3764
   - enabled: 1
-    path: Assets/Scenes/TestLevel_3.unity
-    guid: c5b7eb189aea2450eb0fd5f27c472fad
+    path: Assets/Scenes/Puzzle Levels/TrickyButtonSwitching_With Spikes.unity
+    guid: d191a7886d2cd224680aef2747ce55e2
   m_configObjects: {}
