@@ -1,19 +1,15 @@
 [LOG] System::create                           : Header version = 1.10.06. Current version = 1.10.06.
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
-[LOG] Manager::init                            : maxchannels = 1024 studioflags = 00000009 flags 00000000 extradriverdata 0x0.
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] Manager::init                            : maxchannels = 1024 studioflags = 00000009 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=11006 (95384), maxchannels=1024, flags=0x00030000
-[LOG] OutputCoreAudio::enumerate               : Enumerating...
-[LOG] OutputCoreAudio::enumerate               : Found output driver: "Built-in Output".
-[LOG] OutputCoreAudio::enumerate               : Found output driver: "Soundflower (2ch)".
-[LOG] OutputCoreAudio::enumerate               : Found output driver: "Soundflower (64ch)".
-[LOG] OutputCoreAudio::enumerate               : Done.
-[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
-[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x144b8c208 isAsync 1 updatePeriod 0.02
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 000000003FFD9418 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -26,13 +22,481 @@
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C0193E8 : node = 00000000436F3120
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0193E8
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F3238
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SlowMusic_1', format=2, channels=2, frequency=48000, lengthbytes=160352, lengthpcm=727578, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.290863.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0193E8
+[LOG] SoundI::getSubSound                      : sound 000000001C0193E8.  Subsound index 0 / 1
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 000000004FBE3ED8
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 000000004FBE3ED8
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] Manager::sendConnectTimeHash             : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 000000004FBE3ED8 connected, entering connected state
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006D1BF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD4969E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD4969E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD4969E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD4969E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000050144B98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Jump_01', format=2, channels=1, frequency=48000, lengthbytes=3776, lengthpcm=35739, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.136536.
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C019C58 : node = 00000000436F2A90
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019C58
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F2BA8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='FastMusic', format=2, channels=2, frequency=48000, lengthbytes=482592, lengthpcm=1947042, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.831207.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019C58
+[LOG] SoundI::getSubSound                      : sound 000000001C019C58.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0189C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0189C8
+[LOG] SoundI::release                          : SlowMusic_1 (000000001C0193E8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000003FF6F298)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000001C019598)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006D1BF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD4969E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD4969E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD4969E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD4969E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000050144B98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Jump_03', format=2, channels=1, frequency=48000, lengthbytes=3456, lengthpcm=40616, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.138977.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006D1BF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD4969E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD4969E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD4969E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD4969E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000050144B98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Switch_05', format=2, channels=1, frequency=48000, lengthbytes=2848, lengthpcm=42489, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.217682.
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C0193E8 : node = 00000000436F3270
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0193E8
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F3388
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SlowMusic_1', format=2, channels=2, frequency=48000, lengthbytes=160352, lengthpcm=727578, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.290863.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0193E8
+[LOG] SoundI::getSubSound                      : sound 000000001C0193E8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019598
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019598
+[LOG] SoundI::release                          : FastMusic (000000001C019C58)
+[LOG] SoundI::release                          :     FastMusic (000000003FF6F0F8)
+[LOG] SoundI::release                          :     FastMusic (000000001C0189C8)
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C019C58 : node = 00000000436F2400
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019C58
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F2518
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='FastMusic', format=2, channels=2, frequency=48000, lengthbytes=482592, lengthpcm=1947042, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.831207.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019C58
+[LOG] SoundI::getSubSound                      : sound 000000001C019C58.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0189C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0189C8
+[LOG] SoundI::release                          : SlowMusic_1 (000000001C0193E8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000003FF6FDF8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000001C019598)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006D1BF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD4969E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD4969E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD4969E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD4969E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000050144B98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='MemoryGhost_09', format=2, channels=1, frequency=48000, lengthbytes=3232, lengthpcm=18623, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.137665.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006D1BF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD4969E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD4969E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD4969E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD4969E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000050144B98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='MemoryGhost_11', format=2, channels=1, frequency=48000, lengthbytes=3904, lengthpcm=36975, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.154236.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006D1BF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD4969E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD4969E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD4969E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD4969E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000050144B98
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='MemoryGhost_Off', format=2, channels=1, frequency=48000, lengthbytes=4640, lengthpcm=46278, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.135498.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006D1BF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD4969E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD4969E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD4969E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD4969E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000003FD7D558
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Button_On', format=2, channels=1, frequency=48000, lengthbytes=768, lengthpcm=26198, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.196747.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000006D1BF5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD4969E4B0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD4969E480
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD4969E580
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD4969E640
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000003FD7D558
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Button_Off', format=2, channels=1, frequency=48000, lengthbytes=800, lengthpcm=30666, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.171844.
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C0193E8 : node = 00000000436F1980
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0193E8
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F1A98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SlowMusic_1', format=2, channels=2, frequency=48000, lengthbytes=160352, lengthpcm=727578, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.290863.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0193E8
+[LOG] SoundI::getSubSound                      : sound 000000001C0193E8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019598
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019598
+[LOG] SoundI::release                          : FastMusic (000000001C019C58)
+[LOG] SoundI::release                          :     FastMusic (000000003FF6FF98)
+[LOG] SoundI::release                          :     FastMusic (000000001C0189C8)
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C019C58 : node = 00000000436F1AD0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019C58
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F1BE8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='FastMusic', format=2, channels=2, frequency=48000, lengthbytes=482592, lengthpcm=1947042, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.831207.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019C58
+[LOG] SoundI::getSubSound                      : sound 000000001C019C58.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0189C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0189C8
+[LOG] SoundI::release                          : SlowMusic_1 (000000001C0193E8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000003FF702D8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000001C019598)
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C0193E8 : node = 00000000436F2940
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0193E8
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F2A58
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SlowMusic_1', format=2, channels=2, frequency=48000, lengthbytes=160352, lengthpcm=727578, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.290863.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0193E8
+[LOG] SoundI::getSubSound                      : sound 000000001C0193E8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019598
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019598
+[LOG] SoundI::release                          : FastMusic (000000001C019C58)
+[LOG] SoundI::release                          :     FastMusic (000000003FF6F0F8)
+[LOG] SoundI::release                          :     FastMusic (000000001C0189C8)
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C019C58 : node = 00000000436F2160
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019C58
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F2278
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='FastMusic', format=2, channels=2, frequency=48000, lengthbytes=482592, lengthpcm=1947042, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.831207.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019C58
+[LOG] SoundI::getSubSound                      : sound 000000001C019C58.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0189C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0189C8
+[LOG] SoundI::release                          : SlowMusic_1 (000000001C0193E8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000003FF6F5D8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000001C019598)
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C0193E8 : node = 00000000436F2FD0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0193E8
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F30E8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SlowMusic_1', format=2, channels=2, frequency=48000, lengthbytes=160352, lengthpcm=727578, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.290863.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0193E8
+[LOG] SoundI::getSubSound                      : sound 000000001C0193E8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019598
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019598
+[LOG] SoundI::release                          : FastMusic (000000001C019C58)
+[LOG] SoundI::release                          :     FastMusic (000000003FF70618)
+[LOG] SoundI::release                          :     FastMusic (000000001C0189C8)
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C0189C8 : node = 00000000436F1830
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0189C8
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F1948
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='FastMusic', format=2, channels=2, frequency=48000, lengthbytes=482592, lengthpcm=1947042, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.831207.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0189C8
+[LOG] SoundI::getSubSound                      : sound 000000001C0189C8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019C58
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019C58
+[LOG] SoundI::release                          : SlowMusic_1 (000000001C0193E8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000003FF6F0F8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000001C019598)
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C0193E8 : node = 00000000436F1AD0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0193E8
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F1BE8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SlowMusic_1', format=2, channels=2, frequency=48000, lengthbytes=160352, lengthpcm=727578, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.290863.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0193E8
+[LOG] SoundI::getSubSound                      : sound 000000001C0193E8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : FastMusic (000000001C0189C8)
+[LOG] SoundI::release                          :     FastMusic (000000003FF6F5D8)
+[LOG] SoundI::release                          :     FastMusic (000000001C019C58)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019598
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019598
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C0189C8 : node = 00000000436F1D70
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0189C8
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F1E88
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='FastMusic', format=2, channels=2, frequency=48000, lengthbytes=482592, lengthpcm=1947042, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.831207.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0189C8
+[LOG] SoundI::getSubSound                      : sound 000000001C0189C8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019C58
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019C58
+[LOG] SoundI::release                          : SlowMusic_1 (000000001C0193E8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000003FF6FF98)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000001C019598)
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C0193E8 : node = 00000000436F2E80
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0193E8
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F2F98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SlowMusic_1', format=2, channels=2, frequency=48000, lengthbytes=160352, lengthpcm=727578, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.290863.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0193E8
+[LOG] SoundI::getSubSound                      : sound 000000001C0193E8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019598
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019598
+[LOG] SoundI::release                          : FastMusic (000000001C0189C8)
+[LOG] SoundI::release                          :     FastMusic (000000003FF6F0F8)
+[LOG] SoundI::release                          :     FastMusic (000000001C019C58)
+[LOG] SystemI::createSound                     : filename = \Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000001C0189C8 : node = 00000000436F1C20
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003FF6FA68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C0189C8
+[LOG] SystemI::createSoundInternal             :     Create name='\Users\John\Documents\GitHub\WGJ-Week-54-Amnesia\WGJ Week 54 FMOD Session\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 667328
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000436F1D38
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='FastMusic', format=2, channels=2, frequency=48000, lengthbytes=482592, lengthpcm=1947042, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.831207.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C0189C8
+[LOG] SoundI::getSubSound                      : sound 000000001C0189C8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001C019C58
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001C019C58
+[LOG] SoundI::release                          : FastMusic (000000001C0189C8)
+[LOG] SoundI::release                          :     FastMusic (000000003FF6F0F8)
+[LOG] SoundI::release                          :     FastMusic (000000001C019C58)
+[LOG] SoundI::release                          : SlowMusic_1 (000000001C0193E8)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000003FF6FF98)
+[LOG] SoundI::release                          :     SlowMusic_1 (000000001C019598)
+[LOG] SoundI::release                          :  (000000001BCA1D18)
+[LOG] SoundI::release                          :     MemoryGhost_09 (000000003FF6F438)
+[LOG] SoundI::release                          :  (000000001BCA2CE8)
+[LOG] SoundI::release                          :     MemoryGhost_11 (000000003FF70478)
+[LOG] SoundI::release                          :  (000000001BCA2898)
+[LOG] SoundI::release                          :     Switch_05 (000000003FF6FAB8)
+[LOG] SoundI::release                          :  (000000003FD84E88)
+[LOG] SoundI::release                          :     MemoryGhost_Off (000000003FF6FDF8)
+[LOG] SoundI::release                          :  (000000003FD85448)
+[LOG] SoundI::release                          :     Button_On (000000003FF70138)
+[LOG] SoundI::release                          :  (000000003FD85B78)
+[LOG] SoundI::release                          :     Button_Off (000000003FF6F298)
+[LOG] SoundI::release                          :  (000000001BCA2B78)
+[LOG] SoundI::release                          :     Jump_03 (000000003FF6FC58)
+[LOG] SoundI::release                          :  (000000001BCA2728)
+[LOG] SoundI::release                          :     Jump_01 (000000003FF6EF58)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] ProfileClient::markForDead               : Closing client connection
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] FMOD_OS_Net_Read                         : Interrupted.[ERR] ProfileClient::recvThreadLoopFunction    : Recv thread loop returned 16
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.

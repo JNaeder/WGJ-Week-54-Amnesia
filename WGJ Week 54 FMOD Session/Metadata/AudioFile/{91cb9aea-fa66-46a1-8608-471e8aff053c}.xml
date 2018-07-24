@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{91cb9aea-fa66-46a1-8608-471e8aff053c}">
+        <property name="assetPath">
+            <value>SwitchesAndButtons/Button_On.ogg</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.54580498866213156</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{d807c05b-039b-4ca3-8509-db350b1030c2}</destination>
+        </relationship>
+    </object>
+</objects>

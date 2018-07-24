@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Switch : MonoBehaviour {
 
     public Sprite switchUp, switchDown;
     public GameObject[] puzzleObject;
     public bool destroysObject, turnsOnObject, isOneWay, isSwitched;
+
+    [FMODUnity.EventRef]
+    public string switchSound;
 
     SpriteRenderer sP;
 
@@ -23,8 +27,10 @@ public class Switch : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player") {
+
 			if(isOneWay){
-				DestoryOrCreateObjects();
+                
+                DestoryOrCreateObjects();
 			} else if(!isOneWay){            
 				TurnOnAndOffSwitch();            
 			}
@@ -35,8 +41,10 @@ public class Switch : MonoBehaviour {
 
 	void TurnOnAndOffSwitch(){
 		if(!isSwitched){
-			//press down switch
-			sP.sprite = switchDown;
+            //press down switch
+           
+
+            sP.sprite = switchDown;
 			isSwitched = true;
 			if (destroysObject)
 			{
@@ -82,10 +90,16 @@ public class Switch : MonoBehaviour {
 
 		sP.sprite = switchDown;
 		sP.color = Color.grey;
+        if (!isSwitched) {
+            PlaySwitchSound();
+        }
+
+        isSwitched = true;
         if (puzzleObject != null)
         {
             if (destroysObject)
             {
+               
                 for (int i = 0; i < puzzleObject.Length; i++)
                 {
                     Destroy(puzzleObject[i]);
@@ -94,6 +108,7 @@ public class Switch : MonoBehaviour {
 
             else if (turnsOnObject)
             {
+                
                 for (int i = 0; i < puzzleObject.Length; i++)
                 {
                     puzzleObject[i].SetActive(true);
@@ -103,6 +118,11 @@ public class Switch : MonoBehaviour {
         }
 
 	}
+
+
+    void PlaySwitchSound() {
+        FMODUnity.RuntimeManager.PlayOneShot(switchSound);
+    }
 
 
     private void OnDrawGizmos()

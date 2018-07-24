@@ -9613,6 +9613,7 @@ MonoBehaviour:
   turnsOnObject: 1
   isOneWay: 1
   isSwitched: 0
+  switchSound: event:/Empty
 --- !u!1001 &903040566
 Prefab:
   m_ObjectHideFlags: 0

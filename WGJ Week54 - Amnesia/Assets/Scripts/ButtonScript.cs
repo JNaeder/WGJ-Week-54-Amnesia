@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class ButtonScript : MonoBehaviour {
 
@@ -8,6 +9,9 @@ public class ButtonScript : MonoBehaviour {
 
 	public GameObject[] puzzleObject;
     public LayerMask mask;
+
+    [FMODUnity.EventRef]
+    public string buttonDownSound, buttonUpound;
 
     bool isPressed;
 
@@ -31,6 +35,7 @@ public class ButtonScript : MonoBehaviour {
                         puzzleObject[i].SetActive(false);
                     }
                     sP.sprite = buttonDown;
+                    FMODUnity.RuntimeManager.PlayOneShot(buttonDownSound);
                 }
             }
             else
@@ -46,6 +51,7 @@ public class ButtonScript : MonoBehaviour {
                         }
                     }
                     sP.sprite = buttonUp;
+                    FMODUnity.RuntimeManager.PlayOneShot(buttonUpound);
                 }
             }
         }

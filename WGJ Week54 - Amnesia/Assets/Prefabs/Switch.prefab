@@ -141,6 +141,7 @@ MonoBehaviour:
   turnsOnObject: 0
   isOneWay: 1
   isSwitched: 0
+  switchSound: event:/Switch
 --- !u!212 &212448923962766508
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Outside_Guy_Controller : MonoBehaviour {
 	public float speed = 5f;
@@ -12,6 +13,9 @@ public class Outside_Guy_Controller : MonoBehaviour {
 	bool isGrounded, isTouchingSideLeft, isTouchingSideRight;
 
 	public LayerMask groundMask;
+
+    [FMODUnity.EventRef]
+    public string jumpSound;
 
 	Rigidbody2D rB;
 	Animator anim;
@@ -61,6 +65,7 @@ public class Outside_Guy_Controller : MonoBehaviour {
         {
 			if (isGrounded)
 			{
+                FMODUnity.RuntimeManager.PlayOneShot(jumpSound);
 				rB.velocity = new Vector2(rB.velocity.x, 0);
 				rB.AddForce(Vector2.up * jumpStrength * 100);
 			}

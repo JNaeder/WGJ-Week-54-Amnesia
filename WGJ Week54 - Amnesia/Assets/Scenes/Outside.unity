@@ -36969,7 +36969,7 @@ Prefab:
     - target: {fileID: 114285979067727110, guid: 8d5737d9038054b8ab216dfabc5c6ec0,
         type: 2}
       propertyPath: completedScene
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d5737d9038054b8ab216dfabc5c6ec0, type: 2}

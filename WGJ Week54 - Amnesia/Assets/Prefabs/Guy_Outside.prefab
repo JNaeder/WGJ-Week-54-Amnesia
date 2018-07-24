@@ -215,6 +215,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4096
+  jumpSound: event:/Jump_Outside
 --- !u!212 &212284865757594768
 SpriteRenderer:
   m_ObjectHideFlags: 1

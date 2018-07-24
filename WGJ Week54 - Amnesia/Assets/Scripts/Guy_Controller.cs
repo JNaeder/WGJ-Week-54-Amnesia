@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class Guy_Controller : MonoBehaviour {
 	public float speed = 5f;
@@ -21,6 +22,10 @@ public class Guy_Controller : MonoBehaviour {
 	public Transform groundCheck;
     public Transform sideCheckLeft, sideCheckRight;
 	public LayerMask groundMask;
+
+    [FMODUnity.EventRef]
+    public string jumpSound, memoryGhostSound, memoryGhostSoundOff;
+
 
 	GameObject newClone;
 	Guy_Ghost ghostGuy;
@@ -102,6 +107,7 @@ public class Guy_Controller : MonoBehaviour {
         {
             if (isGrounded)
             {
+                FMODUnity.RuntimeManager.PlayOneShot(jumpSound);
                 rB.velocity = new Vector2(rB.velocity.x, 0);
                 rB.AddForce(Vector2.up * jumpStrength * 100);
             }
@@ -153,7 +159,13 @@ public class Guy_Controller : MonoBehaviour {
 			newX = transform.position.x;
 			ghostGuy = newClone.GetComponent<Guy_Ghost>();
 			ghostGuy.maxSteps = maxSteps;
+
+            if (!isGhosting) {
+                FMODUnity.RuntimeManager.PlayOneShot(memoryGhostSound);
+            }
 			isGhosting = true;
+
+           
 
 
             if (!isGrounded)
@@ -192,6 +204,9 @@ public class Guy_Controller : MonoBehaviour {
 
 
 	void ResetGhost(){
+        if (isGhosting) {
+            FMODUnity.RuntimeManager.PlayOneShot(memoryGhostSoundOff);
+        }
 		isGhosting = false;
         if (ghostGuy != null)
         {
