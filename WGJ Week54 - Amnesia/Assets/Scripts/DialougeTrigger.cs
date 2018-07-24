@@ -7,6 +7,7 @@ public class DialougeTrigger : MonoBehaviour {
 	public Dialogue dialogue;
 	public Dialogue endDialogue;
 	public Dialogue preLevelDialogue;
+	public Dialogue postLevelDialogue;
 
 	DialogueManager dM;
 	GameManager gM;
@@ -41,9 +42,13 @@ public class DialougeTrigger : MonoBehaviour {
 			dM.StartDialouge(preLevelDialogue);
 		} else if(gM.completedScene == comlpetedSceneNum){
 			dM.StartDialouge(dialogue);
-		} else if(gM.completedScene > comlpetedSceneNum){
+		} else if(gM.completedScene == comlpetedSceneNum + 1){
 			dM.StartDialouge(endDialogue);
 		}
+		else if (gM.completedScene > comlpetedSceneNum + 1)
+        {
+			dM.StartDialouge(postLevelDialogue);
+        }
 	}
 
 

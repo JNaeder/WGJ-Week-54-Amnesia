@@ -19,7 +19,7 @@ TagManager:
   - Enemy
   - EnemyBall
   - Floor
-  - 
+  - RainBox
   - 
   - 
   - 
@@ -41,4 +41,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2541841613
+    locked: 0
+  - name: MiddleGround
+    uniqueID: 1649549535
+    locked: 0
+  - name: Forground
+    uniqueID: 108255055
+    locked: 0
+  - name: Other
+    uniqueID: 2204876681
+    locked: 0
+  - name: UI
+    uniqueID: 1064628827
     locked: 0

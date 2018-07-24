@@ -160,6 +160,12 @@ MonoBehaviour:
     picture: {fileID: 21300000, guid: 6ba75769e88114229aab4cdebe16beaa, type: 3}
     sceneToLoad: 0
     loadsScene: 0
+  postLevelDialogue:
+    name: 
+    sentences: []
+    picture: {fileID: 0}
+    sceneToLoad: 0
+    loadsScene: 0
   comlpetedSceneNum: 2
   shadowSprite: {fileID: 21300000, guid: 6ba75769e88114229aab4cdebe16beaa, type: 3}
 --- !u!212 &212329934216102496
@@ -194,8 +200,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1649549535
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 93a03fbbd678545439014289c31046bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

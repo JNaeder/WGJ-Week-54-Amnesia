@@ -12,9 +12,13 @@ public class EndLevelTrigger : MonoBehaviour {
 
 	GameManager gM;
 
+	private void Awake()
+	{
+		gM = FindObjectOfType<GameManager>();
+	}
+
 	// Use this for initialization
 	void Start () {
-		gM = FindObjectOfType<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -30,7 +34,8 @@ public class EndLevelTrigger : MonoBehaviour {
 			{
 				Guy_Controller guy = collision.gameObject.GetComponent<Guy_Controller>();
 				if (!guy.isGhosting)
-				{               
+				{
+					Debug.Log(gM.name);
 					isTriggered = true;
 					gM.completedScene++;
 					StartCoroutine(LoadScene());
