@@ -787,10 +787,6 @@ Prefab:
       propertyPath: m_Name
       value: Door (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
   m_IsPrefabAsset: 0
@@ -913,10 +909,6 @@ Prefab:
       propertyPath: puzzleObject.Array.data[1]
       value: 
       objectReference: {fileID: 218275127}
-    - target: {fileID: 1090116142674086, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
   m_IsPrefabAsset: 0
@@ -1024,10 +1016,6 @@ Prefab:
     - target: {fileID: 4217635909371860, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
@@ -1149,7 +1137,7 @@ Prefab:
     - target: {fileID: 114680201969813628, guid: 360fc562ed8b4fb4886ab6a4d4d2d559,
         type: 2}
       propertyPath: puzzleObject.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4905777400771034, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1239,11 +1227,7 @@ Prefab:
         type: 2}
       propertyPath: puzzleObject.Array.data[2]
       value: 
-      objectReference: {fileID: 1041436501}
-    - target: {fileID: 1090116142674086, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 648298326}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
   m_IsPrefabAsset: 0
@@ -9541,10 +9525,6 @@ Prefab:
       propertyPath: destroysObject
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1090116142674086, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
   m_IsPrefabAsset: 0
@@ -9581,7 +9561,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchUp: {fileID: 21300000, guid: 77c9f6a5bee60ef49a5ef99357dc0799, type: 3}
   switchDown: {fileID: 21300002, guid: 77c9f6a5bee60ef49a5ef99357dc0799, type: 3}
-  puzzleObject: []
+  puzzleObject:
+  - {fileID: 1041436501}
   destroysObject: 0
   turnsOnObject: 1
   isOneWay: 1
@@ -9628,10 +9609,6 @@ Prefab:
     - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
       propertyPath: m_Name
       value: Door (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
@@ -9737,10 +9714,6 @@ Prefab:
       propertyPath: m_Name
       value: Door (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
   m_IsPrefabAsset: 0
@@ -9840,10 +9813,6 @@ Prefab:
       propertyPath: destroysObject
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1090116142674086, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
   m_IsPrefabAsset: 0
@@ -9889,10 +9858,6 @@ Prefab:
     - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
       propertyPath: m_Name
       value: Door (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
@@ -10085,10 +10050,6 @@ Prefab:
     - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
       propertyPath: m_Name
       value: Door (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
@@ -10348,10 +10309,6 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
   m_IsPrefabAsset: 0
@@ -10432,10 +10389,6 @@ Prefab:
       propertyPath: destroysObject
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1090116142674086, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
   m_IsPrefabAsset: 0
@@ -10481,10 +10434,6 @@ Prefab:
     - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
       propertyPath: m_Name
       value: Door (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1546571391946844, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39e664c6ab04a8c4bb4e470393c87c63, type: 2}

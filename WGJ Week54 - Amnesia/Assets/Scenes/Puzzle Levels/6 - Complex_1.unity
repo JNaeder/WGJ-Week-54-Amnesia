@@ -1149,7 +1149,7 @@ Prefab:
     - target: {fileID: 114680201969813628, guid: 360fc562ed8b4fb4886ab6a4d4d2d559,
         type: 2}
       propertyPath: puzzleObject.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4905777400771034, guid: 360fc562ed8b4fb4886ab6a4d4d2d559, type: 2}
       propertyPath: m_LocalPosition.x

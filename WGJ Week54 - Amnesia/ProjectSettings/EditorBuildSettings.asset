@@ -21,12 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Puzzle Levels/4 - SpikesDontHurtGhost.unity
     guid: 946eb08db91dc4897a8f9036652d95ac
   - enabled: 1
-    path: Assets/Scenes/Puzzle Levels/TrickyButtonSwitching_With Spikes.unity
+    path: Assets/Scenes/Puzzle Levels/5 - TrickyButtonSwitching_With Spikes.unity
     guid: d191a7886d2cd224680aef2747ce55e2
   - enabled: 1
-    path: Assets/Scenes/Test Levels/TestLevel_1.unity
-    guid: b7eb4ab2519ac054a94d1f69bf01afa0
-  - enabled: 1
-    path: Assets/Scenes/Test Levels/TestLevel_2.unity
-    guid: 57b18e18593774aa1ac5fbac6dd6c419
+    path: Assets/Scenes/Puzzle Levels/6 - Complex_1.unity
+    guid: 14e289abe1f089f4c87ddacdf1853973
   m_configObjects: {}

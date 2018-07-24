@@ -16,6 +16,7 @@ public class Guy_Ghost : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		ghostBarStartSize = ghostBar.localScale.x;
+
 	}
 	
 	// Update is called once per frame
@@ -25,9 +26,7 @@ public class Guy_Ghost : MonoBehaviour {
 		ghostBarPerc =  1 - (steps / maxSteps);
 		ghostBar.localScale = new Vector3(ghostBarPerc * ghostBarStartSize, ghostBar.localScale.y, 1);
 
-		if(steps >= maxSteps){
-			isGhosting = false;
-		}
+		
 		
 	}
 }

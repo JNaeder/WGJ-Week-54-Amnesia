@@ -108,8 +108,12 @@ public class Switch : MonoBehaviour {
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        
-            for (int i = 0; i < puzzleObject.Length; i++)
+        if (!isOneWay)
+        {
+            Gizmos.color = Color.green;
+        }
+
+        for (int i = 0; i < puzzleObject.Length; i++)
             {
             if (puzzleObject[i] != null)
             {
@@ -118,11 +122,7 @@ public class Switch : MonoBehaviour {
 
             }
 
-		if(!isOneWay){
-			Gizmos.color = Color.green;
-			Gizmos.DrawWireSphere(transform.position, 1f);
-
-		}
+		
             
         
     }
