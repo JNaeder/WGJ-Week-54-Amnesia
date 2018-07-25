@@ -16,7 +16,7 @@ public class OutdoorsManager : MonoBehaviour {
 	void Start () {
 		gM = FindObjectOfType<GameManager>();
 		cam = Camera.main.GetComponent<CameraFollow>();
-
+		Debug.Log(gM.name);
 		Instantiate(guy, spawnPosition[gM.completedScene].position, Quaternion.identity);
 		cam.SetTarget();
 	}

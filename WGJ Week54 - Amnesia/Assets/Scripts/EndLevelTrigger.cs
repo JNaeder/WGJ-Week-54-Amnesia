@@ -18,7 +18,6 @@ public class EndLevelTrigger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gM = FindObjectOfType<GameManager>();
     }
 	
 	// Update is called once per frame
@@ -29,6 +28,7 @@ public class EndLevelTrigger : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
+		gM = FindObjectOfType<GameManager>();
 		if(collision.gameObject.tag == "Player"){
 			if (!isTriggered)
 			{

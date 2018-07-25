@@ -18,11 +18,15 @@ public class DialogueManager : MonoBehaviour {
 
 	bool loadsNextScene;
 
+	private void Awake()
+	{
+		gM = FindObjectOfType<GameManager>();
+	}
+
 	// Use this for initialization
 	void Start () {
 		sentences = new Queue<string>();
 
-		gM = FindObjectOfType<GameManager>();
 	}
 
 	private void Update()
@@ -35,6 +39,7 @@ public class DialogueManager : MonoBehaviour {
 
 
 	public void StartDialouge(Dialogue dialouge){
+		gM = FindObjectOfType<GameManager>();
 		anim.SetBool("isOpen", true);
 		gM.currentScene = dialouge.sceneToLoad;
 		loadsNextScene = dialouge.loadsScene;
@@ -67,7 +72,6 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	public void EndDialouge(){
-		Debug.Log("End Convo");
 		anim.SetBool("isOpen", false);
 
 	}

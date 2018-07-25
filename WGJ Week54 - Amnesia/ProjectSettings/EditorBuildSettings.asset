@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 401cba80456d5486fb92ec59e412ce0b
+  - enabled: 1
     path: Assets/Scenes/Outside.unity
     guid: 45568d8baab21401ea4dac4a6eb61ef7
   - enabled: 1
@@ -15,15 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Puzzle Levels/2 - BasicButtonAndSwitch.unity
     guid: de31af3258478d5498425c25598d3ae2
   - enabled: 1
-    path: Assets/Scenes/Puzzle Levels/3 - GhostJumpingAndSwitches.unity
-    guid: 9389f3b38a558f44585abd11f1cd3764
+    path: Assets/Scenes/Puzzle Levels/3 - GhostJumpingAndSwitches_2.unity
+    guid: 307d7185f278a4c7cba491cec46ac098
   - enabled: 1
-    path: Assets/Scenes/Puzzle Levels/4 - SpikesDontHurtGhost.unity
-    guid: 946eb08db91dc4897a8f9036652d95ac
+    path: Assets/Scenes/Puzzle Levels/4 - SpikesDontHurtGhost_1.unity
+    guid: 1be6da1493a3d4ba6be1774b8a105e18
   - enabled: 1
-    path: Assets/Scenes/Puzzle Levels/5 - TrickyButtonSwitching_With Spikes.unity
-    guid: d191a7886d2cd224680aef2747ce55e2
+    path: Assets/Scenes/Puzzle Levels/5 - TrickyButtonSwitching_With Spikes_2.unity
+    guid: 702f42b3cf9f74347a2885236de6f6d8
   - enabled: 1
-    path: Assets/Scenes/Puzzle Levels/6 - Complex_1.unity
-    guid: 14e289abe1f089f4c87ddacdf1853973
+    path: Assets/Scenes/Puzzle Levels/6 - Complex.unity
+    guid: 558f61c10c86b46a5beaf31fcf38cb16
+  - enabled: 1
+    path: Assets/Scenes/WinMenu.unity
+    guid: ea5d1ab3137214061b81e6d1e4b7275b
   m_configObjects: {}

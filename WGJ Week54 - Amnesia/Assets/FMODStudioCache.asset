@@ -13,20 +13,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114926999766949500}
-  - {fileID: 114821667858279836}
+  - {fileID: 114358077825617878}
   EditorEvents:
   - {fileID: 114445768034256922}
-  - {fileID: 114605853249544596}
-  - {fileID: 114605148197083010}
-  - {fileID: 114793787169789954}
-  - {fileID: 114889498008528790}
-  - {fileID: 114214259594698158}
-  - {fileID: 114714369304811958}
-  - {fileID: 114670533503650010}
-  - {fileID: 114264689005598650}
-  MasterBankRef: {fileID: 114821667858279836}
+  - {fileID: 114553730658855226}
+  - {fileID: 114796420572544894}
+  - {fileID: 114477589524701600}
+  - {fileID: 114469711159638858}
+  - {fileID: 114402073502909822}
+  - {fileID: 114645417363034334}
+  - {fileID: 114589509516330580}
+  - {fileID: 114484940119682700}
+  MasterBankRef: {fileID: 114358077825617878}
   StringsBankRef: {fileID: 114926999766949500}
-  stringsBankWriteTime: 636680573623955406
+  stringsBankWriteTime: 636681071970000000
   cacheVersion: 2
 --- !u!114 &114024687381091072
 MonoBehaviour:
@@ -264,6 +264,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114358077825617878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/John/Documents/GitHub/WGJ-Week-54-Amnesia/WGJ Week 54 FMOD Session/Build/Desktop/Master
+    Bank.bank
+  lastModified: 636681071970000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 690272
+  Exists: 1
 --- !u!114 &114373047247521050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +298,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114402073502909822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/ButtonOn
+  guid: 693bfb5e8acd9a44a0db68bf78f4089b
+  Banks:
+  - {fileID: 114358077825617878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 545
 --- !u!114 &114412676615612186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,12 +357,12 @@ MonoBehaviour:
   Path: event:/Music
   guid: c68b3b9588bf0a4b83c321c5930f94f8
   Banks:
-  - {fileID: 114821667858279836}
+  - {fileID: 114358077825617878}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114065956239742072}
+  - {fileID: 114585801517120274}
   MinDistance: 0
   MaxDistance: 0
   Length: 24000
@@ -359,6 +400,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 658976
   Exists: 1
+--- !u!114 &114469711159638858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/MemoryGhostOff
+  guid: 36bf33820adbd94f824c0236212b7627
+  Banks:
+  - {fileID: 114358077825617878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 964
 --- !u!114 &114475149571375174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,6 +437,72 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114477589524701600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Empty
+  guid: 21d07f99a576ec48b819f70591128fd1
+  Banks:
+  - {fileID: 114358077825617878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114484940119682700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Jump_Inside
+  guid: fa5d099af45c3a429774846eaa02b999
+  Banks:
+  - {fileID: 114358077825617878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 846
+--- !u!114 &114553730658855226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Switch
+  guid: 0ec7ddf1459e5c40855c303da7fe2a06
+  Banks:
+  - {fileID: 114358077825617878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 885
 --- !u!114 &114572613942945354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +518,43 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114585801517120274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114589509516330580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/MemoryGhost
+  guid: 90ea297d9c93a749b2da5b09af3a0e49
+  Banks:
+  - {fileID: 114358077825617878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 832
 --- !u!114 &114602880416663008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +614,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 744
+--- !u!114 &114645417363034334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/ButtonOff
+  guid: 80e1373958eb6d4fbbfcfe741934b9f5
+  Banks:
+  - {fileID: 114358077825617878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 638
 --- !u!114 &114670533503650010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +736,43 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 885
+--- !u!114 &114795801223020156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114796420572544894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Jump_Outside
+  guid: 203b3560e5ee6b4b9bab3ec392720072
+  Banks:
+  - {fileID: 114358077825617878}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 744
 --- !u!114 &114821667858279836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,9 +825,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: /Users/John/Documents/GitHub/WGJ-Week-54-Amnesia/WGJ Week 54 FMOD Session\Build\Desktop\Master
+  Path: /Users/John/Documents/GitHub/WGJ-Week-54-Amnesia/WGJ Week 54 FMOD Session/Build/Desktop/Master
     Bank.strings.bank
-  lastModified: 636680573623955406
+  lastModified: 636681071970000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -12,26 +13,28 @@ public class GameManager : MonoBehaviour {
 	private void Awake()
 	{
 		
-		if(gM != null){
-			Destroy(gameObject);
-		} else {
-			gM = this;
-		}
+		if (gM != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            gM = this;
+        }
 
-		DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
 	}
 
-	// Use this for initialization
-	void Start () {
 
-        
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
+	public void ResetGame(){
+		currentScene = 0;
+		completedScene = 0;
+		inPuzzleOrNot = 0;
 
 
 	}
+
+
+
+
 }

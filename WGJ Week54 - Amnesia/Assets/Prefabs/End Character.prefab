@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0a74784dc004224a46af812a5729aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 0
+  sceneToLoad: 1
   transitionAnim: {fileID: 0}
 --- !u!212 &212976093043878872
 SpriteRenderer:

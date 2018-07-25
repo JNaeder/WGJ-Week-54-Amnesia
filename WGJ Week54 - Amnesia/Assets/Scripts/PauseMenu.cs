@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -13,12 +14,13 @@ public class PauseMenu : MonoBehaviour {
 
 
 	EventSystem eS;
+	GameManager gM;
 
 	// Use this for initialization
 	void Start () {
 		eS = FindObjectOfType<EventSystem>();
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.visible = false;
+		//Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
@@ -63,6 +65,14 @@ public class PauseMenu : MonoBehaviour {
 		pauseSection.SetActive(true);
         controlsSection.SetActive(false);
 		eS.SetSelectedGameObject(pauseScreenResumeButton);
+
+	}
+
+	public void BackToMainMenu(){
+		gM = FindObjectOfType<GameManager>();
+		gM.ResetGame();
+		Time.timeScale = 1;
+		SceneManager.LoadScene(0);
 
 	}
 }

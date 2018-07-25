@@ -18,6 +18,11 @@ public class DialougeTrigger : MonoBehaviour {
 
 	Sprite startSprite;
 
+	private void Awake()
+	{
+		
+	}
+
 	private void Start()
 	{
 		dM = FindObjectOfType<DialogueManager>();

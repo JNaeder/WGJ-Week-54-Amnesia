@@ -122,11 +122,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4621921229243038, guid: 82d90b2b58d66465d9363330f3f4f6f1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: -17.5
       objectReference: {fileID: 0}
     - target: {fileID: 4621921229243038, guid: 82d90b2b58d66465d9363330f3f4f6f1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: -9.5
       objectReference: {fileID: 0}
     - target: {fileID: 4621921229243038, guid: 82d90b2b58d66465d9363330f3f4f6f1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8674,7 +8674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!19719996 &756026487
 TilemapCollider2D:
   m_ObjectHideFlags: 0
